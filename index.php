@@ -77,7 +77,7 @@ $f3->route('POST /contact',
 					\nAddress:" .$contactInfo['address']. "
 					\nServices Needed:" .$contactInfo['services'];
 
-		mail("frito833@gmail.com","Contact for Proclean Elite Website",$message);
+		mail("superbuttery@yahoo.com","Contact for Proclean Elite Website",$message);
 
 
 		$f3->reroute('/free-quote-sent');
