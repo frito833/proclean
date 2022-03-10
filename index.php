@@ -43,6 +43,19 @@ $f3->route('GET /free-quote',
 );
 
 
+$f3->route('GET /free-quote-sent',
+	function($f3) {
+
+		
+		$f3->set('title',"Get a FREE Pressure Washing Quote - Servicing Honolulu, Hawaii");
+		$f3->set('metaDescription','Get a free estimate to power wash your property with Pro Clean Elite!');
+
+		$f3->set('content','free-quote-sent.htm');
+		echo View::instance()->render('layouts/layout.htm');
+	}
+);
+
+
 $f3->route('POST /contact', 
 
 	function($f3) {
@@ -66,9 +79,11 @@ $f3->route('POST /contact',
 
 		mail("frito833@gmail.com","Contact for Proclean Elite Website",$message);
 
-		$f3->set('messageSent',1);
-		$f3->set('content','free-quote.htm');
-		echo View::instance()->render('layouts/layout.htm');		
+
+		$f3->reroute('/free-quote-sent');
+		//$f3->set('messageSent',1);
+		//$f3->set('content','free-quote.htm');
+		//echo View::instance()->render('layouts/layout.htm');		
 		
 	}
 );
