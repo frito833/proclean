@@ -47,8 +47,15 @@ $f3->route('POST /contact',
 
 	function($f3) {
 
+		
 
 		$contactInfo = $f3->get('POST');
+
+		if (!isset($contactInfo['address']))
+			$contactInfo['address'] = '';
+
+		if (!isset($contactInfo['services']))
+			$contactInfo['services'] = '';
 
 		$message = "
 					Name:" .$contactInfo['name']. "
