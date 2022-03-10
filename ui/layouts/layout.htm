@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<?php echo $this->render('layouts/head.htm'); ?>
+	</head>
+	<body>
+		<header>
+			<?php echo $this->render('layouts/header.htm'); ?>
+		</header>
+		<main>
+			<?php echo $this->render(Base::instance()->get('content')); ?>
+		</main>
+		<footer class="footer bg-dark py-5">
+			<?php echo $this->render('layouts/footer.htm'); ?>
+		</footer>
+	</body>
+</html>
