@@ -22,7 +22,7 @@ $f3->config('../proclean.ini');
 $f3->route('GET /',
 	function($f3) {
 		$f3->set('title',"Pro Clean Elite Pressure Washing - Servicing Honolulu, Hawaii");
-		$f3->set('metaDescription','Pressure Washing Service in Honolulu, Hawaii. We power wash commerical, residential, cars, boats, and more.');
+		$f3->set('metaDescription','Pressure Washing Service in Honolulu, HI. We pressure wash commercial and residential. Licensed and Insured. We power wash commerical, residential, cars, boats, and more.');
 
 		$f3->set('content','home.htm');
 		echo View::instance()->render('layouts/layout.htm');
