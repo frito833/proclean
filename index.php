@@ -58,9 +58,7 @@ $f3->route('GET /free-quote-sent',
 
 $f3->route('POST /contact', 
 
-	function($f3) {
-
-		
+	function($f3) {		
 
 		$contactInfo = $f3->get('POST');
 
@@ -70,20 +68,15 @@ $f3->route('POST /contact',
 		if (!isset($contactInfo['services']))
 			$contactInfo['services'] = '';
 
-		$message = "
-					Name:" .$contactInfo['name']. "
+		$message = "Name:" .$contactInfo['name']. "
 					\nPhone:" .$contactInfo['phone']. "
 					\nEmail:" .$contactInfo['email']. "
 					\nAddress:" .$contactInfo['address']. "
 					\nServices Needed:" .$contactInfo['services'];
 
-		mail("superbuttery@yahoo.com","Contact for Proclean Elite Website",$message);
+		mail("superbuttery@yahoo.com","Contact from Pro Clean Elite Website",$message);
 
-
-		$f3->reroute('/free-quote-sent');
-		//$f3->set('messageSent',1);
-		//$f3->set('content','free-quote.htm');
-		//echo View::instance()->render('layouts/layout.htm');		
+		$f3->reroute('/free-quote-sent');	
 		
 	}
 );

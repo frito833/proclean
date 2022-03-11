@@ -1,0 +1,11 @@
+Sitemap: https://procleanelitepressurewashing.com/sitemap.xml
+
+User-agent: Googlebot
+Disallow:
+
+#Block Baiduspider - Chinese Spider
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: *
+Disallow:
